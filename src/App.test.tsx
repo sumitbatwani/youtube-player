@@ -1,9 +1,16 @@
-import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { render } from '@testing-library/react';
 import App from './App';
+import YouTubeEmbedPlayer from './components/YouTubeEmbedPlayer';
 
-test('renders learn react link', () => {
+test('renders app', () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+});
+
+test('render youtube player', () => {
+  render(<YouTubeEmbedPlayer
+    embedId='lLqRchtjN00'
+    title=''
+    width='1080'
+    height='720'
+  />);
 });
